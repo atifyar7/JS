@@ -36,4 +36,7 @@ const university= {
 // console.log(university.student.studentName.firstName);
 
 const combinedObj= Object.assign(myObj, university)
-console.log(combinedObj);
+// console.log(combinedObj);
+
+console.log(Object.keys(myObj));
+console.log(Object.values(myObj));
