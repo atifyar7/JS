@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguageName(langName){
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        const languages= document.querySelector(".language")
+        languages.appendChild(li)
+    }
+
+    addLanguageName("Python")
+    addLanguageName("C++")
+
+    //optimized way to add element...
+
+    function addOptimizeLanguage(LangName){
+        const li = document.createElement("li")
+        const LangText = document.createTextNode(LangName)
+        li.appendChild(LangText)
+        const NewLanguage = document.querySelector(".language")
+        NewLanguage.appendChild(li)
+    }
+
+    addOptimizeLanguage("HTML")
+
+    // edit element ( C++ with Java)
+
+    const thirdLanguage = document.querySelector("li:nth-child(3)")
+    const newLi = document.createElement("li")
+    newLi.textContent="Java"
+    thirdLanguage.replaceWith(newLi)
+
+    // remove or delete element (delete python)
+
+    const secondChild = document.querySelector("li:nth-child(2)")
+    secondChild.remove()
+
+</script>
+
+</html>
